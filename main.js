@@ -48,7 +48,11 @@ function printNums(nums){
 //     var lName = lastName.value;
 //     printNums(lName);
 // })
-
-function showFullName(){
-    console.log(firstName);
+fullNameBtn.addEventListener("click", function(){
+    var 
+    console.log(firstName.value);
 }
+)
+// function showFullName(){
+//     console.log(firstName);
+// }
