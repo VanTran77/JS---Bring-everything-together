@@ -35,24 +35,22 @@ function printNums(nums){
     // add new li to ul
     showNums.appendChild(newList);
 }
-
-// firstNameBtn.addEventListener("click", function(){
-//     //get text from input
-//     showNums.innerHTML = "";
-//     var fName = firstName.value;
-//     printNums(fName);
-// })
-// lastNameBtn.addEventListener("click", function(){
-//     //get text from input
-//     showNums.innerHTML = "";
-//     var lName = lastName.value;
-//     printNums(lName);
-// })
 fullNameBtn.addEventListener("click", function(){
-    var 
-    console.log(firstName.value);
+    fullReport.innerHTML = "";
+    var getFn = firstName;
+    var getLn = lastName;
+    showFullName(getFn, getLn);
 }
 )
-// function showFullName(){
-//     console.log(firstName);
-// }
+function showFullName(fn, ln){
+    var getFirstName = document.createElement('th');
+    getFirstName.innerHTML = fn.value;
+    fullReport.appendChild(getFirstName);
+    var getLastName = document.createElement('th');
+    getLastName.innerHTML = ln.value;
+    fullReport.appendChild(getLastName);
+    console.log(getFirstName);
+    var getFullName = document.createElement('th');
+    getFullName.innerHTML = getFirstName.innerHTML + " " + getLastName.innerHTML;
+    fullReport.appendChild(getFullName);
+}
